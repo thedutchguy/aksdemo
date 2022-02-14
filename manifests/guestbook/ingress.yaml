@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: guestbook
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+  labels:
+    app: guestbook
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /guestbook/*
+            backend:
+              serviceName: guestbook-ui
+              servicePort: 80
