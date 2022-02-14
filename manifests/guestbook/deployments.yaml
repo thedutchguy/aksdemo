@@ -2,6 +2,7 @@ apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and befor
 kind: Deployment
 metadata:
   name: redis-master
+  namespace: guestbook
 spec:
   selector:
     matchLabels:
@@ -33,6 +34,7 @@ apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and befor
 kind: Deployment
 metadata:
   name: redis-replica
+  namespace: guestbook
 spec:
   selector:
     matchLabels:
@@ -71,7 +73,8 @@ spec:
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: frontend
+  name: guestbook
+  namespace: guestbook
 spec:
   selector:
     matchLabels:

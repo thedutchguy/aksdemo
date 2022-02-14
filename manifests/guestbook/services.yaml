@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-master
+  namespace: guestbook
   labels:
     app: redis
     tier: backend
@@ -19,6 +20,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-replica
+  namespace: guestbook
   labels:
     app: redis
     tier: backend
@@ -34,7 +36,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui
+  name: guestbook
+  namespace: guestbook
   labels:
     app: guestbook
     tier: frontend

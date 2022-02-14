@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-server
+  namespace: yelb
   labels:
     app: redis-server
     tier: cache
@@ -17,6 +18,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yelb-db
+  namespace: yelb
   labels:
     app: yelb-db
     tier: backenddb
@@ -32,6 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yelb-appserver
+  namespace: yelb
   labels:
     app: yelb-appserver
     tier: middletier
@@ -47,6 +50,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yelb-ui
+  namespace: yelb
   labels:
     app: yelb-ui
     tier: frontend
