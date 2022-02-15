@@ -6,4 +6,4 @@ patches:
     kind: ConfigMap
     name: ingress-appgw-cm
     namespace: kube-system
-    labelSelector: "app: ingress-appgw"
+    labelSelector: "app=ingress-appgw"
