@@ -1,6 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-  - agic-watch-all-namespaces.yaml
 patches:
-  - agic-watch-all-namespaces.yaml
+- path: agic-watch-all-namespaces.yaml
+  target:
+    kind: ConfigMap
+    name: ingress-appgw-cm
+    namespace: kube-system
+    labelSelector: "app: ingress-appgw"
