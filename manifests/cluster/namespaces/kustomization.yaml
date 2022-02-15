@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - yelb.yaml
   - guestbook.yaml
+  - demo.yaml
