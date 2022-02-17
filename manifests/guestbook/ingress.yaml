@@ -11,8 +11,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: guestbook/*
-            pathType: Prefix
+          - path: /guestbook/*
             backend:
               service: 
                 name: guestbook
